@@ -18,11 +18,11 @@
       console.assert(event.target.id === 'selector', 'first: target.id');
       console.assert(event.target.nodeName === 'SELECT', 'first: target.nodeName');
       console.assert(event.target.form.id === 'inputs', 'first: target.form.id');
-      console.assert(event.target.childElementCount === 'option', 'third: target.childElementCount');
+      console.assert(event.target.childElementCount === 3,  'third: target.childElementCount');
     }
     function second(event) {
       debugger;
-      console.assert(event.target.name === 'blur', 'second: event.type');
+      console.assert(event.target.type === 'select-one', 'second: event.type');
       console.assert(event.target.id === 'selector', 'second: target.id');
       console.assert(event.target.nodeName === 'SELECT', 'second: target.nodeName');
       console.assert(event.target.name === 'type', 'second: target.name');
